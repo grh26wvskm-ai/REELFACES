@@ -217,6 +217,7 @@ h2 {
 }
 
 .card {
+
     background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
@@ -349,6 +350,7 @@ h2 {
     color: #3b3535;
     line-height: 1.7;
     max-width: 600px;
+    text-align: justify;
 }
 
 /* TRAILER AND REVIEWS */

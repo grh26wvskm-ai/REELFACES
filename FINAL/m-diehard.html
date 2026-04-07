@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ReelFaces - Cast of Die Hard</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="logo" href="index.html">REEL<span>FACES</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Movies</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+
+        <div class="movie-top-row">
+            <a class="back-btn" href="drama/m-titanic.html">&#8592; Back to Movie</a>
+        </div>
+
+        <div class="movie-overview">
+            <div class="overview-left">
+                <img src="Die Hard.webp" alt="Die Hard"/>
+            </div>
+            <div class="overview-right">
+                <div class="genre-tags">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">Thriller</span>
+                </div>
+                <h1>Die Hard</h1>
+                <div class="movie-meta">
+                    <span class="star">&#9733; 4.5/5</span>
+                    <span>1988</span>
+                    <span>United States</span>
+                    <span>132 minutes</span>
+                </div>
+                <p class="movie-desc">A New York police officer who visits Los Angeles during Christmas. While attending a party in a skyscraper, terrorists take the building hostage. McClane becomes the only person able to stop them, using clever tactics and bravery to save the hostages and defeat the criminals.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="scroll" id="scroll">
+        <div class="cast-container" id="cast-container">
+
+            <a href="actor-hercules.html" class="cast-card">
+                <img src="cat1.avif" alt="Hercules">
+                <p>Hercules</p>
+            </a>
+
+            <a href="actor-megara.html" class="cast-card">
+                <img src="cat2.avif" alt="Megara">
+                <p>Megara</p>
+            </a>
+
+            <a href="actor-hades.html" class="cast-card">
+                <img src="cat3.avif" alt="Hades">
+                <p>Hades</p>
+            </a>
+
+            <a href="actor-phil.html" class="cast-card">
+                <img src="cat4.avif" alt="Phil">
+                <p>Phil</p>
+            </a>
+
+            <a href="actor-zeus.html" class="cast-card">
+                <img src="cat5.avif" alt="Zeus">
+                <p>Zeus</p>
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        var el = document.getElementById('scroll');
+        el.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            el.scrollLeft += e.deltaY;
+        });
+    </script>
+
+</body>
+</html>
