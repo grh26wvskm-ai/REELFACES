@@ -1,4 +1,4 @@
-    <!doctype html>
+<!doctype html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,7 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html">Movies</a></li>
+            <li><a href="#" id="genreToggle">Genre</a></li>
         </ul>
     </nav>
 
@@ -31,7 +32,7 @@
                 <span>USA</span>
             </div>
             <p>A young aristocrat falls in love with a poor artist aboard the ill-fated R.M.S. Titanic.</p>
-            <a class="btn" href="drama/m-titanic.html">&#9654; View Movie</a>
+            <a class="btn" href="m-titanic.html">&#9654; View Movie</a>
         </div>
     </div>
 
@@ -55,19 +56,9 @@
             <button class="cat-btn" onclick="showGenre('c-thriller.html', this)">Thriller</button>
         </div>
     </div>
-
     <iframe id="genreFrame" class="genre-frame" src="content-all.html"></iframe>
-
-    <script>
-        function showGenre(page, btn) {
-            document.getElementById('genreFrame').src = page;
-            var buttons = document.querySelectorAll('.cat-btn');
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove('active');
-            }
-            btn.classList.add('active');
-        }
-    </script>
-
+ 
+    <script src="index.js"></script>
+ 
 </body>
 </html>

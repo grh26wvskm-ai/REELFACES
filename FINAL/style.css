@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
 }
 
 .nav-links a {
-    color: #f08cae;
+    color: #3b3535;
     text-decoration: none;
     font-size: 0.85rem;
     transition: color 0.2s;
@@ -145,45 +145,58 @@ body::-webkit-scrollbar {
     background: rgba(214, 48, 56, 0.1);
 }
 
-/* cat selection */
-.category-section {
-    background: #fef2f6;
-    padding: 16px 30px 14px;
-    border-bottom: 1px solid #f08cae;
+.index-header {
+    margin-top: 60px;
+    border-bottom: 3px solid #f08cae;
 }
 
-.category-label {
-    font-size: 0.75rem;
+/* cat selection */
+.genre-dropdown {
+    display: none;
+    position: fixed;
+    top: 55px;
+    right: 0;
+    width: 200px;
+    background: #fff0f5;
+    border-left: 2px solid #f08cae;
+    border-bottom: 2px solid #f08cae;
+    border-radius: 0 0 0 10px;
+    padding: 16px;
+    z-index: 998;
+}
+
+.genre-dropdown.open {
+    display: block;
+}
+
+.dropdown-label {
+    font-size: 0.7rem;
     color: #f08cae;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
-.category-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.cat-btn {
-    background: #ffffff;
-    border: 1px solid #ffc5d4;
+.dropdown-link {
+    display: block;
+    font-size: 0.82rem;
     color: #3b3535;
-    padding: 5px 16px;
-    border-radius: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.78rem;
     text-decoration: none;
-    transition: all 0.2s;
-    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 5px;
 }
 
-.cat-btn:hover, .cat-btn.active {
-    background: #f08cae;
-    border-color: #f08cae;
-    color: #ffffff;
+.dropdown-link:hover {
+    background: #ffc5d4;
+    color: #3b3535;
 }
+
+.dropdown-link.active {
+    background: #f08cae;
+    color: #ffffff;
+    font-weight: 600;
+}
+
 
 /* frsme */
 .genre-frame {
@@ -205,15 +218,22 @@ h2 {
     color: #3b3535;
     border-left: 3px solid #f08cae;
     padding-left: 10px;
+    padding-top: 8px;
     margin-bottom: 16px;
 }
 
+.section {
+    max-width: 1180px;
+    margin: 0 auto 30px;
+    padding: 5px 1px;
+}
+
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+    grid-template-columns: repeat(5, 220px);
     gap: 14px;
-    margin-bottom: 26px;
-    padding: 24px;
+    justify-content: center;
 }
 
 .card {
