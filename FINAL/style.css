@@ -25,8 +25,30 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 30px;
+    padding: 10px 20px;
     border-bottom: 2px solid #f08cae;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.logo img {
+    height: 60px;
+    display: block;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #3b3535; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 0;
+
 }
 
 .navbar .logo {
