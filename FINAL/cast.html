@@ -8,7 +8,7 @@
     <title>ReelFaces - Cast of Titanic</title>
 </head>
 <body>
-
+ 
     <nav class="navbar">
         <a class="logo" href="index.html">REEL<span>FACES</span></a>
         <ul class="nav-links">
@@ -16,13 +16,11 @@
             <li><a href="index.html">Movies</a></li>
         </ul>
     </nav>
-
+ 
     <div class="page-header">
-
         <div class="movie-top-row">
             <a class="back-btn" href="m-titanic.html">&#8592; Back to Movie</a>
         </div>
-
         <div class="movie-overview">
             <div class="overview-left">
                 <img src="D1.png" alt="Titanic"/>
@@ -39,50 +37,64 @@
                     <span>Country</span>
                     <span>Duration</span>
                 </div>
-                <p class="movie-desc">Write your description here.</p>
             </div>
         </div>
-
     </div>
-
+ 
     <div class="scroll" id="scroll">
-        <div class="cast-container" id="cast-container">
-
-            <a href="actor-hercules.html" class="cast-card">
+        <div class="cast-container">
+ 
+            <div class="cast-card">
                 <img src="cat1.avif" alt="Hercules">
-                <p>Hercules</p>
-            </a>
-
-            <a href="actor-megara.html" class="cast-card">
+                <div class="cast-info">
+                    <div class="cast-name">Hercules</div>
+                    <div class="cast-role">Actor Name</div>
+                </div>
+            </div>
+ 
+            <div class="cast-card">
                 <img src="cat2.avif" alt="Megara">
-                <p>Megara</p>
-            </a>
-
-            <a href="actor-hades.html" class="cast-card">
+                <div class="cast-info">
+                    <div class="cast-name">Megara</div>
+                    <div class="cast-role">Actor Name</div>
+                </div>
+            </div>
+ 
+            <div class="cast-card">
                 <img src="cat3.avif" alt="Hades">
-                <p>Hades</p>
-            </a>
-
-            <a href="actor-phil.html" class="cast-card">
+                <div class="cast-info">
+                    <div class="cast-name">Hades</div>
+                    <div class="cast-role">Actor Name</div>
+                </div>
+            </div>
+ 
+            <div class="cast-card">
                 <img src="cat4.avif" alt="Phil">
-                <p>Phil</p>
-            </a>
-
-            <a href="actor-zeus.html" class="cast-card">
+                <div class="cast-info">
+                    <div class="cast-name">Phil</div>
+                    <div class="cast-role">Actor Name</div>
+                </div>
+            </div>
+ 
+            <div class="cast-card">
                 <img src="cat5.avif" alt="Zeus">
-                <p>Zeus</p>
-            </a>
-
+                <div class="cast-info">
+                    <div class="cast-name">Zeus</div>
+                    <div class="cast-role">Actor Name</div>
+                </div>
+            </div>
+ 
         </div>
     </div>
-
+ 
     <script>
-        var el = document.getElementById('scroll');
-        el.addEventListener('wheel', function(e) {
+        // scrolls sideways when you use the mouse wheel
+        var strip = document.getElementById('scroll');
+        strip.addEventListener('wheel', function(e) {
             e.preventDefault();
-            el.scrollLeft += e.deltaY;
+            strip.scrollLeft += e.deltaY;
         });
     </script>
-
+ 
 </body>
 </html>
