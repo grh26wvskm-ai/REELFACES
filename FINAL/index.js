@@ -49,3 +49,4 @@ function openMenu() {
 function closeMenu() {
     genreMenu.classList.remove('open');
 }
+
