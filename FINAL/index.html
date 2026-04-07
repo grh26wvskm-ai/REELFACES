@@ -1,0 +1,73 @@
+    <!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ReelFaces</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="index.html">REEL<span>FACES</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Movies</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" style="background-image: url('titanic.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-categories">
+                <span class="hero-category">Drama</span>
+                <span class="hero-category">Romance</span>
+            </div>
+            <h1>Titanic</h1>
+            <div class="movie-info">
+                <span class="star">&#11088; 7.9</span>
+                <span>1997</span>
+                <span>USA</span>
+            </div>
+            <p>A young aristocrat falls in love with a poor artist aboard the ill-fated R.M.S. Titanic.</p>
+            <a class="btn" href="drama/m-titanic.html">&#9654; View Movie</a>
+        </div>
+    </div>
+
+    <div class="category-section">
+        <p class="category-label">Browse by Genre</p>
+        <div class="category-buttons">
+            <button class="cat-btn active" onclick="showGenre('content-all.html', this)">All</button>
+            <button class="cat-btn" onclick="showGenre('c-action.html', this)">Action</button>
+            <button class="cat-btn" onclick="showGenre('c-adventure.html', this)">Adventure</button>
+            <button class="cat-btn" onclick="showGenre('c-animation.html', this)">Animation</button>
+            <button class="cat-btn" onclick="showGenre('c-biography.html', this)">Biography</button>
+            <button class="cat-btn" onclick="showGenre('c-comedy.html', this)">Comedy</button>
+            <button class="cat-btn" onclick="showGenre('c-crime.html', this)">Crime</button>
+            <button class="cat-btn" onclick="showGenre('c-drama.html', this)">Drama</button>
+            <button class="cat-btn" onclick="showGenre('c-fantasy.html', this)">Fantasy</button>
+            <button class="cat-btn" onclick="showGenre('c-history.html', this)">History</button>
+            <button class="cat-btn" onclick="showGenre('c-horror.html', this)">Horror</button>
+            <button class="cat-btn" onclick="showGenre('c-romance.html', this)">Romance</button>
+            <button class="cat-btn" onclick="showGenre('c-scifi.html', this)">Sci-Fi</button>
+            <button class="cat-btn" onclick="showGenre('c-sport.html', this)">Sport</button>
+            <button class="cat-btn" onclick="showGenre('c-thriller.html', this)">Thriller</button>
+        </div>
+    </div>
+
+    <iframe id="genreFrame" class="genre-frame" src="content-all.html"></iframe>
+
+    <script>
+        function showGenre(page, btn) {
+            document.getElementById('genreFrame').src = page;
+            var buttons = document.querySelectorAll('.cat-btn');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            btn.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
