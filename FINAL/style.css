@@ -493,75 +493,69 @@ h2 {
 }
 
 .scroll {
-    display: flex;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: visible;
     cursor: grab;
-    position: relative;
-    align-items: center;
     height: 420px;
     scrollbar-width: none;
+    padding-bottom: 60px;
 }
-
-.scroll::-webkit-scrollbar {
-    display: none;
-}
-
+ 
+.scroll::-webkit-scrollbar { display: none; }
 .scroll:active { cursor: grabbing; }
-
+ 
 .cast-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 40px;
+    display: inline-flex;
+    align-items: flex-start;
     gap: 15px;
-    will-change: transform;
-    flex-shrink: 0;
+    padding: 20px 40px 0;
 }
-
+ 
 .cast-card {
-    text-decoration: none;
-    color: white;
     flex-shrink: 0;
     width: 200px;
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: width 0.4s ease, height 0.4s ease;
+    cursor: default;
 }
-
-.cast-card.active {
-    width: 250px;
-    height: 380px;
-}
-
+ 
 .cast-card img {
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 300px;
     object-fit: cover;
     object-position: top;
     display: block;
+    border-radius: 6px;
     filter: grayscale(100%) sepia(40%) hue-rotate(300deg) saturate(80%) brightness(1.05);
     opacity: 0.5;
-    transition: filter 0.5s ease, transform 0.4s ease, opacity 0.5s ease;
-    pointer-events: none;
+    transition: filter 0.5s ease, opacity 0.5s ease, transform 0.4s ease;
 }
-
+ 
 .cast-card:hover img {
     filter: grayscale(0%);
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.04);
 }
-
-.cast-card p {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
+ 
+.cast-info {
+    margin-top: 10px;
     text-align: center;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
     opacity: 0;
-    transition: opacity 0.3s;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+ 
+.cast-card:hover .cast-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+ 
+.cast-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #3b3535;
+    margin-bottom: 2px;
+}
+ 
+.cast-role {
+    font-size: 0.72rem;
+    color: #f08cae;
 }
