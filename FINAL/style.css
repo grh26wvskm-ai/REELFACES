@@ -596,7 +596,7 @@ h2 {
     overflow-x: auto;
     overflow-y: visible;
     cursor: grab;
-    height: 420px;
+    height: auto;
     scrollbar-width: none;
     padding-bottom: 60px;
 }
@@ -646,6 +646,20 @@ h2 {
 .cast-card:hover .cast-info {
     opacity: 1;
     transform: translateY(0);
+}
+
+.description {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ffc5d4;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    width: 1060px; 
+    box-sizing: border-box;
+    word-wrap: break-word;
+    max-height: 180px;
+    overflow-y: auto;
 }
  
 .cast-name {
