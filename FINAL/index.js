@@ -49,3 +49,36 @@ function openMenu() {
 function closeMenu() {
     genreMenu.classList.remove('open');
 }
+
+var slides   = document.querySelectorAll('.hero-slide');
+var dots     = document.querySelectorAll('.hero-dot');
+var prevBtn  = document.getElementById('heroPrev');
+var nextBtn  = document.getElementById('heroNext');
+var current  = 0;
+var autoPlay;
+
+function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+}
+
+function startAuto() {
+    autoPlay = setInterval(function () { goTo(current + 1); }, 4000);
+}
+
+function resetAuto() {
+    clearInterval(autoPlay);
+    startAuto();
+}
+
+nextBtn.addEventListener('click', function () { goTo(current + 1); resetAuto(); });
+prevBtn.addEventListener('click', function () { goTo(current - 1); resetAuto(); });
+
+dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { goTo(i); resetAuto(); });
+});
+
+startAuto();

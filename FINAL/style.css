@@ -103,27 +103,30 @@ body::-webkit-scrollbar {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 500px;
+    max-width: 600px;
+    font-size: 100px;
+    margin-top: 100px;
+    margin-left: 50px;
 }
 
 .hero-categories {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
 
 .hero-category {
     background: rgba(240, 140, 174, 0.40);
     border: 1px solid #f08cae;
     color: #3b3535;
-    font-size: 0.68rem;
+    font-size: 1.0rem;
     padding: 3px 10px;
     border-radius: 3px;
 }
 
 .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 8px;
 }
@@ -134,17 +137,92 @@ body::-webkit-scrollbar {
     margin-bottom: 10px;
 }
 
+
 .star { color: #c47a3a; }
 
 .hero-content p {
-    font-size: 0.84rem;
+    font-size: 1.0rem;
     color: #3b3535;
-    line-height: 1.6;
-    margin-bottom: 16px;
+    margin-bottom: px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+    height: 500px;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    height: 500px;
+    background-size: 100%;
+    background-position: center top;
+    display: flex;
+    padding: 40px 30px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+
+.hero-slide.active {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hero-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(240, 140, 174, 0.55);
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.hero-nav:hover {
+    background: #f08cae;
+}
+
+.hero-prev { left: 12px; }
+.hero-next { right: 12px; }
+
+.hero-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+.hero-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.45);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero-dot.active {
+    background: #f08cae;
 }
 
 .btn {
