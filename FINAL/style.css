@@ -254,7 +254,7 @@ body::-webkit-scrollbar {
 .genre-dropdown {
     display: none;
     position: fixed;
-    top: 55px;
+    top: 80px;
     right: 0;
     width: 200px;
     background: #fff0f5;
@@ -622,7 +622,6 @@ h2 {
     height: 300px;
     object-fit: cover;
     object-position: top;
-    align-items: center;
     display: block;
     border-radius: 6px;
     filter: grayscale(100%) sepia(40%) hue-rotate(300deg) saturate(80%) brightness(1.05);
