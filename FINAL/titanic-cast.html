@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ReelFaces - Cast of Titanic</title>
+</head>
+<body>
+ 
+    <nav class="navbar">
+        <a class="logo" href="index.html">REEL<span>FACES</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Movies</a></li>
+        </ul>
+    </nav>
+ 
+    <div class="page-header">
+        <div class="movie-top-row">
+            <a class="back-btn" href="m-raiders.html">&#8592; Back to Movie</a>
+        </div>
+        <div class="movie-overview">
+            <div class="overview-left">
+                <img src="AC5.webp" alt="Raiders"/>
+            </div>
+            <div class="overview-right">
+                <div class="genre-tags">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">Adventure</span>
+                </div>
+                <h1>Raiders of the Lost Ark</h1>
+                <div class="movie-meta">
+                    <span class="star">&#9733;  8.4 / 10.0</span>
+                    <span>1981</span>
+                    <span>Country</span>
+                    <span>Duration</span>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="scroll" id="scroll">
+        <div class="cast-container">
+ 
+            <div class="cast-card">
+                <img src="harrison.webp" alt="Harrison">
+                <div class="cast-info">
+                    <div class="cast-name">Indiana Jones</div>
+                    <div class="cast-role">Harrison Ford</div>
+                </div>
+            </div>
+ 
+            <div class="cast-card">
+                <img src="karen.webp" alt="Marion Ravenwood">
+                <div class="cast-info">
+                    <div class="cast-name">Marion Ravenwood</div>
+                    <div class="cast-role">Karen Allen</div>
+                </div>
+            </div>
+ 
+            <div class="cast-card">
+                <img src="paul.jpg" alt="Dr. René Belloq">
+                <div class="cast-info">
+                    <div class="cast-name">Dr. René Belloq</div>
+                    <div class="cast-role">Paul Freeman</div>
+                </div>
+            </div>
+ 
+            <div class="cast-card">
+                <img src="ronald.jpg" alt="Major Arnold Toht">
+                <div class="cast-info">
+                    <div class="cast-name">Major Arnold Toht</div>
+                    <div class="cast-role">Ronald Lacey</div>
+                </div>
+            </div>
+ 
+            <div class="cast-card">
+                <img src="john.webp" alt="Sallah">
+                <div class="cast-info">
+                    <div class="cast-name">Sallah</div>
+                    <div class="cast-role">John Rhys-Davies</div>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+ 
+    <script>
+        // scrolls sideways when you use the mouse wheel
+        var strip = document.getElementById('scroll');
+        strip.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            strip.scrollLeft += e.deltaY;
+        });
+    </script>
+ 
+</body>
+</html>
